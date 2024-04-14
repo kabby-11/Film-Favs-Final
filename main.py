@@ -14,13 +14,13 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 Bootstrap5(app)
 MOVIE_URL = "https://api.themoviedb.org/3/search/movie"
-API_KEY = "0cd81d8253fee5fd452cfb177c6f307c"
+API_KEY = os.getenv('API_KEY')
 # # create the extension
 db = SQLAlchemy()
 # # create the app
 
 # # configure the SQLite database, relative to the app instance folder
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URI", "sqlite:///project.db")
 # # initialize the app with the extension
 db.init_app(app)
 
@@ -101,7 +101,7 @@ def add():
     movie_id = request.args.get('id')
     if movie_id:
       
-        response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=0cd81d8253fee5fd452cfb177c6f307c")
+        response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={API_KEY}")
         data_movie = response.json()
         new_movie = Movie(title = f"{data_movie['original_title']}",img_url = f"https://image.tmdb.org/t/p/w500{data_movie['poster_path']}", year = f"{data_movie['release_date'].split('-')[0]}", description = f"{data_movie['overview']}")
         db.session.add(new_movie)
