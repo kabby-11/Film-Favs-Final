@@ -6,5 +6,5 @@ Requests==2.31.0
 WTForms==3.0.1
 SQLAlchemy==2.0.25
 gunicorn==21.2.0
-dotenv==1.0.1
+dotenv
 gunicorn==21.2.0
