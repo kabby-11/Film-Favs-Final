@@ -8,5 +8,5 @@ SQLAlchemy==2.0.25
 gunicorn==21.2.0
 python-dotenv
 gunicorn==21.2.0
-Werkzeug==3.0.0
+Werkzeug==2.3.7
 psycopg2-binary==2.9.9
