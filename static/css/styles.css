@@ -420,6 +420,9 @@ a:hover{
 	width: 100%;
 }
 
+.edit-form{
+	color: white;
+}
 
 /* .cards-carousel::-webkit-scrollbar {
 	display: none;
