@@ -4,9 +4,7 @@ flask_sqlalchemy==3.0.5
 Flask_WTF==1.1.1
 Requests==2.31.0
 WTForms==3.0.1
-Werkzeug==3.0.0
 SQLAlchemy==2.0.25
 gunicorn==21.2.0
-pycopg2-binary
 dotenv==1.0.1
 gunicorn==21.2.0
