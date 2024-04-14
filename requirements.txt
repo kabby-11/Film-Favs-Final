@@ -9,3 +9,4 @@ SQLAlchemy==2.0.25
 gunicorn==21.2.0
 pycopg2-binary==2.9.9
 dotenv==1.0.1
+gunicorn==21.2.0
